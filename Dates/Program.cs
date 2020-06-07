@@ -8,12 +8,15 @@ namespace Dates
     {
         static void Main(string[] args)
         {
-            // MM-DD-YYYY - America
-            // DD-MM-YYYY - Europe
+            // MM-DD-YYYY - America.
+            // DD-MM-YYYY - Europe.
+
+            // Путь к файлу с текстом и датами.
+            var path = "text.txt";
 
             var date = "";
 
-            using (var sr = new StreamReader("text.txt"))
+            using (var sr = new StreamReader(path))
                 date = sr.ReadToEnd();
 
             var result = Convert(date);
